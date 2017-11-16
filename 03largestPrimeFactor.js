@@ -7,7 +7,7 @@ function largestPrimeFactor() {
     while (largeNumber % primeNumbers === 0) {
       largeNumber = largeNumber / primeNumbers;
     }
-  primeNumbers++;
+    primeNumbers++;
   }
   
   console.log(largeNumber);
