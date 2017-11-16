@@ -1,5 +1,26 @@
 function largestPrimeFactor() {
   
+  let largeNumber = 600851475143;
+  let primeNumbers = 2;
+  
+  while (primeNumbers * primeNumbers < largeNumber) {
+    while (largeNumber % primeNumbers === 0) {
+      largeNumber = largeNumber / primeNumbers;
+    }
+  primeNumbers++;
+  }
+  
+  console.log(largeNumber);
+  
+}
+largestPrimeFactor();
+
+//answer is 6857
+
+/* The code below is memory inefficient
+
+function largestPrimeFactor() {
+  
   let allNumbers = [];
   for (let a = 2; a < 600851475143; a++) {
     allNumbers.push(a);
@@ -29,7 +50,7 @@ function largestPrimeFactor() {
 }
 
 largestPrimeFactor();
-
+*/
 /*I know this works because I tried it with the example of 13195.
 But when I tried with 600851475143, my program crashes because
 I think there isn't sufficient memory to handle that large of 
